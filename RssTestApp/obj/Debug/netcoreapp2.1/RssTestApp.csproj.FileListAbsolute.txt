@@ -1,0 +1,13 @@
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\netcoreapp2.1\RssTestApp.deps.json
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\netcoreapp2.1\RssTestApp.runtimeconfig.json
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\netcoreapp2.1\RssTestApp.runtimeconfig.dev.json
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\netcoreapp2.1\RssTestApp.dll
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\netcoreapp2.1\RssTestApp.pdb
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\netcoreapp2.1\NDde.dll
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\netcoreapp2.1\RssTestApp.csprojAssemblyReference.cache
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\netcoreapp2.1\RssTestApp.csproj.CoreCompileInputs.cache
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\netcoreapp2.1\RssTestApp.AssemblyInfoInputs.cache
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\netcoreapp2.1\RssTestApp.AssemblyInfo.cs
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\netcoreapp2.1\RssTestApp.csproj.CopyComplete
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\netcoreapp2.1\RssTestApp.dll
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\netcoreapp2.1\RssTestApp.pdb
