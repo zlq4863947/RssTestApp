@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using NodeDde;
 
@@ -8,7 +9,6 @@ namespace ConsoleApp1
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -18,11 +18,7 @@ namespace ConsoleApp1
             services.Add("RSS", new Dictionary<string, object>());
 
             IDictionary<string, object> rss = (IDictionary<string, object>)services["RSS"];
-            rss.Add("9501.T", new List<string>());
-
-            List<string> topic = (List<string>)rss["9501.T"];
-            topic.Add("銘柄名称");
-            topic.Add("現在値");
+            rss.Add("9501.T", new string[] { "銘柄名称", "現在値" });
 
             IDictionary<string, object> callbacks = new Dictionary<string, object>();
             callbacks.Add("OnDisconnected", (Func<object, Task<object>>)(async (data) => {
@@ -57,7 +53,7 @@ namespace ConsoleApp1
 
             invoke(new Dictionary<string, object>() {
                 { "method", "StartAdvise" }
-            });
+            }).Wait();
             /*
             IDictionary<string, object> opts2 = new Dictionary<string, object>();
             opts2.Add("method", "Connect");

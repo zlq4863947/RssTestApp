@@ -1,0 +1,9 @@
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\RssTestApp.exe.config
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\RssTestApp.exe
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\RssTestApp.pdb
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\bin\Debug\NDde.dll
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\RssTestApp.csprojAssemblyReference.cache
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\RssTestApp.csproj.CoreCompileInputs.cache
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\RssTestApp.csproj.CopyComplete
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\RssTestApp.exe
+C:\Users\23tl\Source\Repos\RssTestApp\RssTestApp\obj\Debug\RssTestApp.pdb
