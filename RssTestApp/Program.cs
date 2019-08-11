@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using NodeDde;
 
@@ -14,14 +15,14 @@ namespace ConsoleApp1
             var client = new Client();
 
             IDictionary<string, object> services = new Dictionary<string, object>();
-            services.Add("myapp", new Dictionary<string, object>());
+            services.Add("RSS", new Dictionary<string, object>());
 
-            IDictionary<string, object> myapp = (IDictionary<string, object>)services["myapp"];
-            myapp.Add("mytopic", new List<string>());
+            IDictionary<string, object> rss = (IDictionary<string, object>)services["RSS"];
+            rss.Add("9501.T", new List<string>());
 
-            List<string> mytopics = (List<string>)myapp["mytopic"];
-            mytopics.Add("item1");
-            mytopics.Add("item2");
+            List<string> topic = (List<string>)rss["9501.T"];
+            topic.Add("銘柄名称");
+            topic.Add("現在値");
 
             IDictionary<string, object> callbacks = new Dictionary<string, object>();
             callbacks.Add("OnDisconnected", (Func<object, Task<object>>)(async (data) => {
@@ -39,7 +40,42 @@ namespace ConsoleApp1
             input.Add("callbacks", callbacks);
 
 
-            object x = client.GetInvoker(input).Result;
+            Func<object, Task<object>> invoke = (Func<object, Task<object>>)client.GetInvoker(input).Result;
+
+            var res = invoke(new Dictionary<string, object>() {
+                { "method", "Service" }
+            }).Result;
+            Console.WriteLine(res);
+
+            invoke(new Dictionary<string, object>() {
+                { "method", "Connect" }
+            }).Wait();
+
+            var isConnected = invoke(new Dictionary<string, object>() {
+                { "method", "IsConnected" }
+            }).Result;
+
+            invoke(new Dictionary<string, object>() {
+                { "method", "StartAdvise" }
+            });
+            /*
+            IDictionary<string, object> opts2 = new Dictionary<string, object>();
+            opts2.Add("method", "Connect");
+            invoke(opts2).Wait();
+
+
+            IDictionary<string, object> opts3 = new Dictionary<string, object>();
+            opts2.Add("method", "Connect");
+            invoke(opts2).Wait();*/
+
+            /*
+            IDictionary<string, object> method = (IDictionary<string, object>)opts["method"];
+            method.Add("Service", (Func<object, Task<object>>)(async (data) => {
+                Console.WriteLine("Service");
+                return "222";
+            }));
+            */
+            // 
 
             Console.ReadLine();
         }
