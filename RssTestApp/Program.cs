@@ -54,6 +54,15 @@ namespace ConsoleApp1
             invoke(new Dictionary<string, object>() {
                 { "method", "StartAdvise" }
             }).Wait();
+
+            var reqParam = new Dictionary<string, object>() {
+                { "method", "Request" },
+            };
+            reqParam.Add("item", new string[] { "市場部名称", "現在値詳細時刻", "現在値" });
+
+            var reqRes = invoke(reqParam).Result;
+            Console.WriteLine(reqRes);
+
             /*
             IDictionary<string, object> opts2 = new Dictionary<string, object>();
             opts2.Add("method", "Connect");
